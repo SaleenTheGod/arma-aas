@@ -76,7 +76,7 @@
   become: yes
   become_user: "{{ lgsm_server_user }}"
 
-- include_tasks: run_commands.yml
-  loop: "{{ lgsm_server_commands }}"
-  loop_control:
-    loop_var: item
+# - include_tasks: run_commands.yml
+#   loop: "{{ lgsm_server_commands }}"
+#   loop_control:
+#     loop_var: item
