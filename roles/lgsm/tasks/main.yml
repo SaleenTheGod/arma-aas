@@ -56,10 +56,20 @@
     block: "{{ lgsm_server_specific_config }}"
   when: lgsm_server_specific_config is defined
 
-- name: Template out config files to lgsm config directory
+- name: Template out arma3server.cfg config file to lgsm config directory
   template:
-    src: "{{ item }}"
-    dest: "/home/{{ lgsm_server_user }}/lgsm/config-lgsm/{{ item }}"
+    src: templates/lgsm/lgsm/config-lgsm/arma3server/arma3server.cfg.j2
+    dest: "/home/{{ lgsm_server_user }}/lgsm/config-lgsm/arma3server/arma3server.cfg"
+    owner: "{{ lgsm_server_user }}"
+    group: "{{ lgsm_server_user }}"
+    mode: '0755'
+  become: yes
+  become_user: "{{ lgsm_server_user }}"
+
+- name: Template out common.cfg config file to lgsm config directory
+  template:
+    src: templates/lgsm/lgsm/config-lgsm/arma3server/common.cfg.j2
+    dest: "/home/{{ lgsm_server_user }}/lgsm/config-lgsm/arma3server/common.cfg"
     owner: "{{ lgsm_server_user }}"
     group: "{{ lgsm_server_user }}"
     mode: '0755'
