@@ -9,7 +9,7 @@
     lgsm_steamcmd_username: "2ndMRBSuper"
     lgsm_steamcmd_password: ""
     lgsm_config_arma_modlist: "mods/@2ndmrb_customgear\\;mods/@ace-compat-rhs-gref\\;mods/@cba_a3\\;mods/@cup-terrains-maps\\;mods/@niarms-core\\;mods/@project-opfor\\;mods/@rhsgref\\;mods/@tactical-position-ready\\;mods/@3den-enhanced\\;mods/@ace-compat-rhs-usaf\\;mods/@crye-gen-3-uniforms-nato-retexture\\;mods/@dui\\;mods/@hebontes-military-training-ground\\;mods/@niarms-m60-gpmgs\\;mods/@radio-animations-for-task-force-radio\\;mods/@rhssaf\\;mods/@task-force-arrowhead-radio\\;mods/@ace\\;mods/@achilles\\;mods/@cup-terrains-core\\;mods/@enhancedmovement\\;mods/@ilbe-assault-pack-tfar\\;mods/@niarms-minimi-lmgs\\;mods/@rds-civilian-pack\\;mods/@rhsusaf\\;mods/@ace-compat-rhs-afrf\\;mods/@align\\;mods/@cup-terrains-cwa\\;mods/@enhancedsoundscape\\;mods/@immerse\\;mods/@no-hit-animation\\;mods/@rhsafrf\\;mods/@suppress\\;mods/@jbad\\;mods/@lythium\\;mods/@interiors-for-cup\\;"
-    lgsm_config_arma_ip: {{ ansible_default_ipv4.address }}
+    lgsm_config_arma_ip: ansible_default_ipv4.address
   roles:
       - { role: lgsm, become: yes }
       - { role: rclone, become: yes }
