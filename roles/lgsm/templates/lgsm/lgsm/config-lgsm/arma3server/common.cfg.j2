@@ -1,0 +1,15 @@
+##################################
+######## Common Settings #########
+##################################
+# PLACE GLOBAL SETTINGS HERE
+## These settings will apply to all instances
+
+### ATTENTION: This file is managed by Ansible. Any local changes will be overwritten by the master copy.
+steamuser="{{ lgsm_steamcmd_username }}"
+steampass="{{ lgsm_steamcmd_password }}""
+
+
+fn_parms(){
+parms="-ip=${ip} -port=${port} -cfg=${networkcfgfullpath} -config=${servercfgfullpath} -mod=${mods} -servermod=${servermods} -
+bepath=${bepath} -loadmissiontomemory"
+}
