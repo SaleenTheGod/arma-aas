@@ -63,6 +63,8 @@
     owner: {{ lgsm_server_user }}
     group: {{ lgsm_server_user }}
     mode: '0755'
+  become: yes
+  become_user: "{{ lgsm_server_user }}"
 
 - include_tasks: run_commands.yml
   loop: "{{ lgsm_server_commands }}"
