@@ -7,4 +7,5 @@
 - name: Install LGSM dependencies
   apt:
     name: "{{ item }}"
+    state: present
   loop: "{{ lgsm_dependencies }}"
